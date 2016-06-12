@@ -32,22 +32,25 @@ public class MainNetParams extends NetworkParameters {
     public MainNetParams() {
         super();
         genesisBlock = createGenesis(this);
+        alertSigningKey = Hex.decode
+                ("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f");
         interval = INTERVAL;
         targetTimespan = TARGET_TIMESPAN;
         proofOfWorkLimit = Utils.decodeCompactBits(0x1e0fffffL);
         addressHeader = 28;
-        p2shHeader = 22;
+        p2shHeader = 5;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
-        dumpedPrivateKeyHeader = 156;
+        dumpedPrivateKeyHeader = 128;
         port = 29333;
-        packetMagic = 0xfbc0b6db;
+        packetMagic = 0xFBC0B6DBL;
+//        packetMagic = 0xfbc0b6db;
         genesisBlock.setDifficultyTarget(0x1e0ffff0);
         genesisBlock.setTime(1460409903L);
-        genesisBlock.setNonce(106749L);
+        genesisBlock.setNonce(106749);
         genesisBlock.setMerkleRoot(new Sha256Hash("0072849199923b05d61ffb0814527b730778c5a479fa869581316c187e6ec1da"));
 
         id = ID_MAINNET;
-        subsidyDecreaseBlockCount = 840000;
+        subsidyDecreaseBlockCount = 2;
         spendableCoinbaseDepth = 100;
         String genesisHash = genesisBlock.getHashAsString();
         checkState(genesisHash.equals("6989fa140ccf5b8be8a699fa2edb7618ca1a66cfd11367b65df078f438678732"),

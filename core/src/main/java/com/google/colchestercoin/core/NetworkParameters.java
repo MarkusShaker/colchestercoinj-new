@@ -48,7 +48,7 @@ public abstract class NetworkParameters implements Serializable {
     /**
      * The protocol version this library implements.
      */
-    public static final int PROTOCOL_VERSION = 70002;
+    public static final int PROTOCOL_VERSION = 70003;
 
     /**
      * The alert signing key originally owned by Satoshi, and now passed on to Gavin along with a few others.
@@ -129,7 +129,7 @@ public abstract class NetworkParameters implements Serializable {
      * network rules in a soft-forking manner, that is, blocks that don't follow the rules are accepted but not
      * mined upon and thus will be quickly re-orged out as long as the majority are enforcing the rule.
      */
-    public static final int BIP16_ENFORCE_TIME = 1333238400;
+    public static final int BIP16_ENFORCE_TIME = 1460409903;
     
     /**
      * The maximum money to be generated
