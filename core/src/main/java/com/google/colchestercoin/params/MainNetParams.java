@@ -40,17 +40,16 @@ public class MainNetParams extends NetworkParameters {
         addressHeader = 28;
         p2shHeader = 5;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
-        dumpedPrivateKeyHeader = 128;
+        dumpedPrivateKeyHeader = 156;
         port = 29333;
-        packetMagic = 0xFBC0B6DBL;
-//        packetMagic = 0xfbc0b6db;
+        packetMagic = 0xfbc0b6db;
         genesisBlock.setDifficultyTarget(0x1e0ffff0);
         genesisBlock.setTime(1460409903L);
-        genesisBlock.setNonce(106749);
+        genesisBlock.setNonce(106749L);
         genesisBlock.setMerkleRoot(new Sha256Hash("0072849199923b05d61ffb0814527b730778c5a479fa869581316c187e6ec1da"));
 
         id = ID_MAINNET;
-        subsidyDecreaseBlockCount = 2;
+        subsidyDecreaseBlockCount = 840000;
         spendableCoinbaseDepth = 100;
         String genesisHash = genesisBlock.getHashAsString();
         checkState(genesisHash.equals("6989fa140ccf5b8be8a699fa2edb7618ca1a66cfd11367b65df078f438678732"),
