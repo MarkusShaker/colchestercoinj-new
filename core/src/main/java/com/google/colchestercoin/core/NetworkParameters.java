@@ -86,7 +86,7 @@ public abstract class NetworkParameters implements Serializable {
      */
     protected int spendableCoinbaseDepth;
     protected int subsidyDecreaseBlockCount;
-    
+
     protected int[] acceptableAddressCodes;
     protected String[] dnsSeeds;
     protected Map<Integer, Sha256Hash> checkpoints = new HashMap<Integer, Sha256Hash>();
@@ -123,14 +123,14 @@ public abstract class NetworkParameters implements Serializable {
     public static final int TARGET_TIMESPAN = (int)(3.5 * 24 * 60 * 60);  // 3.5 days per difficulty cycle, on average.
     public static final int TARGET_SPACING = (int)(2.5 * 60);  // 2.5 minutes per block.
     public static final int INTERVAL = TARGET_TIMESPAN / TARGET_SPACING;
-    
+
     /**
      * Blocks with a timestamp after this should enforce BIP 16, aka "Pay to script hash". This BIP changed the
      * network rules in a soft-forking manner, that is, blocks that don't follow the rules are accepted but not
      * mined upon and thus will be quickly re-orged out as long as the majority are enforcing the rule.
      */
     public static final int BIP16_ENFORCE_TIME = 1460409903;
-    
+
     /**
      * The maximum money to be generated
      */
